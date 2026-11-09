@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-300">
+    <div class="max-w-4xl mx-auto mt-10 px-4">
+
+      <h1 class="text-3xl font-bold text-center text-blue-600 mb-6 flex items-center justify-center gap-3"> 
+  <img src="https://img.magnific.com/free-vector/books-stack-realistic_1284-4735.jpg?semt=ais_hybrid&w=740&q=80" alt="Library Logo" class="h-12 w-18 object-cover rounded-xl" />
+  Book Library 
+</h1>
+<div class="bg-white p-6 rounded-xl shadow mb-6">
+    <h2 class="text-xl font-bold mb-4 ">Add New Book</h2>
+    <form action="" id="bookForm" onsubmit="addBook(event)">
+        <input type="hidden" id="editIndex">
+        <label class="block mb-2">Book Name</label>
+                <input type="text" id="bookName"
+                    class="w-full border p-2 rounded mb-4 outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter book name">
+             
+                    <label for="" class="block mb-2">Author</label>
+                    <input type="text" id="author"
+                    class="w-full border p-2 rounded mb-4 outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter author name">
+
+                    <label for="" class="block mb-2 ">Category</label>
+                    <select name="" id="category"
+                    class="w-full border p-2 rounded mb-4">
+                <option value="">Select Category</option>
+                <option >Action</option>
+                <option >Crime</option>
+                <option >Triller</option>
+                <option >Advanture</option>
+                <option >Romantic</option>
+                </select>
+                <button type="submit" id="submitBtn"
+                class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700">Add Book</button>
+                <button type="button" onclick="clearForm()"
+                    class="bg-red-500 text-white px-5 py-2 rounded hover:bg-red-600">
+                    Clear
+                </button>
+    </form>
+</div>
+<div class="bg-white p-5 rounded-lg shadow">
+    <h2 class="text-xl font-semibold mb-4">Book List</h2>
+    <div class="w-full">
+        <table class="w-full border-collapse text-center">
+            <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="p-3">No</th>
+                            <th class="p-3">Book Name</th>
+                            <th class="p-3">Author</th>
+                            <th class="p-3">Category</th>
+                            <th class="p-3">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="result"></tbody>
+
+        </table>
+    </div>
+</div>
+
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+</html>
